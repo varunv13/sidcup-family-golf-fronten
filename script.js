@@ -2,7 +2,7 @@ var crsr = document.querySelector("#cursor");
 var crsr_blr = document.querySelector("#cursor-blur");
 
 document.addEventListener("mousemove", function (dets) {
-  crsr.style.left = dets.x + 30 + "px";
+  crsr.style.left = dets.x  + "px";
   crsr.style.top = dets.y + "px";
   crsr_blr.style.left = dets.x - 190 + "px";
   crsr_blr.style.top = dets.y - 190 + "px";
