@@ -43,7 +43,8 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50%;
   position: fixed;
   z-index: 99;
-  transition: all linear 0.1s;
+  /* transition: all linear 0.1s; */
+  transition: transform 0.3s ease, border 0.3s ease, background-color 0.3s ease;
 }
 
 #cursor-blur {
@@ -146,7 +147,7 @@ video {
   justify-content: center;
   left: 1%;
   bottom: 2%;
-  transition: all ease 0.5;
+  transition: all ease 0.5s;
 }
 
 #page1 #arrow i {
@@ -156,7 +157,7 @@ video {
 }
 
 #page1 #arrow:hover {
-  scale: 0.4;
+  transform: scale(0.4);
   background-color: #95c11e;
 }
 

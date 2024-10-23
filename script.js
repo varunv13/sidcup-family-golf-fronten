@@ -2,22 +2,22 @@ var crsr = document.querySelector("#cursor");
 var crsr_blr = document.querySelector("#cursor-blur");
 
 document.addEventListener("mousemove", function (dets) {
-  crsr.style.left = dets.x  + "px";
-  crsr.style.top = dets.y + "px";
-  crsr_blr.style.left = dets.x - 190 + "px";
-  crsr_blr.style.top = dets.y - 190 + "px";
+  crsr.style.left = dets.clientX + 30 + "px"; // Use clientX
+  crsr.style.top = dets.clientY - 0.01 + "px"; // Use clientY
+  crsr_blr.style.left = dets.clientX - 190 + "px"; // Use clientX
+  crsr_blr.style.top = dets.clientY - 190 + "px"; // Use clientY
 });
 
 var h4All = document.querySelectorAll("#nav h4, .elem");
 h4All.forEach(function (elem) {
   elem.addEventListener("mouseenter", function () {
-    crsr.style.scale = 3;
+    crsr.style.transform = "scale(3)"; // Use transform for scaling
     crsr.style.border = "1px solid #fff";
     crsr.style.backgroundColor = "transparent";
   });
 
   elem.addEventListener("mouseleave", function () {
-    crsr.style.scale = 1;
+    crsr.style.transform = "scale(1)"; // Reset scale
     crsr.style.border = "0px solid #95C11E";
     crsr.style.backgroundColor = "#95C11E";
   });
