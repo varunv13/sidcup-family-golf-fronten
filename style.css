@@ -25,6 +25,17 @@ body {
   width: 100%;
 }
 
+body::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  background: linear-gradient(#95c11e, #119f3a);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 50px;
+}
+
 #cursor {
   height: 20px;
   width: 20px;
@@ -32,6 +43,7 @@ body {
   border-radius: 50%;
   position: fixed;
   z-index: 99;
+  transition: all linear 0.1s;
 }
 
 #cursor-blur {
